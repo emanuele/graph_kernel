@@ -125,7 +125,6 @@ class GK_WL(GK_Base):
                 for v in range(len(lists[i])):
                     # form a multiset label of the node v of the i'th graph
                     # and convert it to a string
-#                    pdb.set_trace()
                     long_label = np.concatenate((np.array([labels[i][v]]), np.sort(labels[i][lists[i][v]])))
                     long_label_string = str(long_label)
                     # if the multiset label has not yet occurred, add it to the
@@ -143,7 +142,6 @@ class GK_WL(GK_Base):
             
             if verbose:
                 print("Number of compressed labels: ", str(label_counter))
-            #pdb.set_trace()
             
             k += np.dot(phi.transpose(), phi)
             labels = copy.deepcopy(new_labels)
